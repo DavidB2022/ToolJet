@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from './Components/Button';
+import { ButtonFast } from './Components/ButtonFast';
 import { Image } from './Components/Image';
 import { Text } from './Components/Text';
 import { Table } from './Components/Table/Table';
@@ -44,6 +45,7 @@ import ErrorBoundary from './ErrorBoundary';
 
 const AllComponents = {
   Button,
+  ButtonFast,
   Image,
   Text,
   TextInput,
@@ -164,8 +166,8 @@ export const Box = function Box({
     }
     const listItem = isListView
       ? resolveReferences(allComponents[component.parent].component.definition.properties.data.value, currentState)[
-          extraProps.listviewItemIndex
-        ] ?? {}
+      extraProps.listviewItemIndex
+      ] ?? {}
       : {};
     onEvent(eventName, { ...options, customVariables: { listItem }, component });
   };

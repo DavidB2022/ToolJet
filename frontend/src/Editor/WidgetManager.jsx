@@ -76,7 +76,7 @@ export const WidgetManager = function WidgetManager({ componentTypes, zoomLevel,
     const otherSection = { title: 'others', items: [] };
     const allWidgets = [];
 
-    const commonItems = ['Table', 'Chart', 'Button', 'Text', 'Datepicker'];
+    const commonItems = ['Table', 'Chart', 'Button', 'Text', 'Datepicker', 'ButtonFast'];
     const formItems = [
       'TextInput',
       'NumberInput',

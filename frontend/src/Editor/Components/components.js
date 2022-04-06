@@ -158,6 +158,54 @@ export const componentTypes = [
     },
   },
   {
+    name: 'ButtonFast',
+    displayName: 'ButtonFast',
+    description: 'Trigger actions: queries, alerts etc',
+    component: 'ButtonFast',
+    defaultSize: {
+      width: 3,
+      height: 30,
+    },
+    others: {
+      showOnDesktop: { type: 'toggle', displayName: 'Show on desktop' },
+      showOnMobile: { type: 'toggle', displayName: 'Show on mobile' },
+    },
+    properties: {
+      text: { type: 'code', displayName: 'ButtonFast Text' },
+      loadingState: { type: 'toggle', displayName: 'Loading State' },
+    },
+    events: {
+      onClick: { displayName: 'On click' },
+    },
+    styles: {
+      backgroundColor: { type: 'color', displayName: 'Background color' },
+      textColor: { type: 'color', displayName: 'Text color' },
+      visibility: { type: 'toggle', displayName: 'Visibility' },
+      disabledState: { type: 'toggle', displayName: 'Disable' },
+      borderRadius: { type: 'number', displayName: 'Border radius' },
+    },
+    exposedVariables: {},
+    definition: {
+      others: {
+        showOnDesktop: { value: '{{true}}' },
+        showOnMobile: { value: '{{false}}' },
+      },
+      properties: {
+        text: { value: `Button` },
+        visible: { value: '{{true}}' },
+        loadingState: { value: `{{false}}` },
+      },
+      events: [],
+      styles: {
+        backgroundColor: { value: '#375FCF' },
+        textColor: { value: '#fff' },
+        visibility: { value: '{{true}}' },
+        borderRadius: { value: '{{0}}' },
+        disabledState: { value: '{{false}}' },
+      },
+    },
+  },
+  {
     name: 'Chart',
     displayName: 'Chart',
     description: 'Display charts',
